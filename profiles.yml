@@ -1,0 +1,26 @@
+bucket_to_bq:
+  outputs:
+    dev:
+      dataset: Client Data
+      job_execution_timeout_seconds: 300
+      job_retries: 1
+      location: US
+      method: oauth
+      priority: interactive
+      project: cloud-function-test-375006
+      threads: 5
+      type: bigquery
+  target: dev
+demo_dbt:
+  outputs:
+    dev:
+      dataset: dbt_demo
+      job_execution_timeout_seconds: 300
+      job_retries: 1
+      location: US
+      method: oauth
+      priority: interactive
+      project: cloud-function-test-375006
+      threads: 4
+      type: bigquery
+  target: dev
